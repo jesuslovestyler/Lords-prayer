@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="The Lord’s Prayer from Matthew 6:9–13, with a gentle reflection on each line.">
+  <link rel="icon" href="data:,">
+  <title>The Lord’s Prayer — Line by Line</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f4efe4;
+      --bg-deep: #e9dfce;
+      --ink: #241c17;
+      --muted: #6f6258;
+      --faint: rgba(48, 36, 27, .14);
+      --accent: #9c551f;
+      --glow: rgba(209, 129, 51, .22);
+      --paper: rgba(255, 252, 245, .68);
+      --serif: "Libre Baskerville", Georgia, serif;
+      --sans: "Manrope", system-ui, sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #100e0d;
+        --bg-deep: #18130f;
+        --ink: #f3eadc;
+        --muted: #bfb09e;
+        --faint: rgba(246, 230, 208, .14);
+        --accent: #e2a05c;
+        --glow: rgba(225, 139, 58, .25);
+        --paper: rgba(42, 31, 22, .48);
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 50% 7rem, var(--glow) 0, transparent 28rem),
+        linear-gradient(180deg, var(--bg-deep) 0, var(--bg) 34rem, var(--bg) 100%);
+      font-family: var(--sans);
+      line-height: 1.7;
+      min-width: 320px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(255,255,255,.07) .6px, transparent .7px);
+      background-size: 7px 7px;
+      opacity: .24;
+      z-index: 5;
+    }
+
+    .opening {
+      min-height: 92svh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 5rem 1.5rem 4rem;
+    }
+
+    .opening-inner { max-width: 780px; }
+
+    .flame {
+      width: 20px;
+      height: 34px;
+      margin: 0 auto 2.3rem;
+      border-radius: 58% 42% 62% 38% / 72% 58% 42% 28%;
+      background: linear-gradient(165deg, #fff1b2 3%, #efa354 44%, #a74922 100%);
+      box-shadow: 0 0 18px 7px var(--glow), 0 0 54px 22px var(--glow);
+      transform: rotate(5deg);
+      transform-origin: 50% 100%;
+      animation: breathe 4.8s ease-in-out infinite alternate;
+    }
+
+    @keyframes breathe {
+      from { transform: rotate(3deg) scale(.96); filter: brightness(.96); }
+      to { transform: rotate(-2deg) scale(1.04); filter: brightness(1.08); }
+    }
+
+    .opening .context {
+      margin: 0 0 1.25rem;
+      color: var(--accent);
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 8vw, 5.5rem);
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -.035em;
+    }
+
+    .invitation {
+      max-width: 34rem;
+      margin: 1.7rem auto 0;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: clamp(1rem, 2.3vw, 1.18rem);
+      font-style: italic;
+    }
+
+    .begin {
+      display: inline-flex;
+      align-items: center;
+      gap: .75rem;
+      margin-top: 2.6rem;
+      padding: .72rem 0;
+      border-bottom: 1px solid var(--accent);
+      color: var(--ink);
+      font-size: .86rem;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: .04em;
+    }
+
+    .begin span { color: var(--accent); font-size: 1.1rem; }
+    .prayer { width: 100%; }
+
+    .moment {
+      position: relative;
+      min-height: 82svh;
+      display: grid;
+      place-items: center;
+      padding: 7rem 1.5rem;
+    }
+
+    .moment::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 1px;
+      height: 4.2rem;
+      background: linear-gradient(to bottom, transparent, var(--faint));
+    }
+
+    .moment-inner {
+      width: min(820px, 100%);
+      display: grid;
+      grid-template-columns: 7rem minmax(0, 1fr);
+      gap: 2.2rem;
+      align-items: start;
+    }
+
+    .number {
+      padding-top: .45rem;
+      color: var(--accent);
+      font-family: var(--serif);
+      font-size: .9rem;
+      letter-spacing: .12em;
+      text-align: right;
+    }
+
+    blockquote { margin: 0; }
+
+    blockquote p {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3.65rem);
+      line-height: 1.28;
+      letter-spacing: -.025em;
+    }
+
+    .reflection {
+      max-width: 36rem;
+      margin: 2rem 0 0;
+      padding-top: 1.35rem;
+      border-top: 1px solid var(--faint);
+      color: var(--muted);
+      font-size: clamp(.98rem, 2vw, 1.08rem);
+      line-height: 1.85;
+    }
+
+    .closing {
+      padding: 8rem 1.5rem 4rem;
+      background: var(--paper);
+      border-top: 1px solid var(--faint);
+    }
+
+    .full-prayer {
+      width: min(720px, 100%);
+      margin: 0 auto;
+    }
+
+    .closing h2 {
+      margin: 0 0 2.2rem;
+      color: var(--accent);
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .full-prayer p {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(1.55rem, 3.7vw, 2.45rem);
+      line-height: 1.7;
+    }
+
+    .amen {
+      display: block;
+      margin-top: 1rem;
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    footer {
+      width: min(720px, calc(100% - 3rem));
+      margin: 0 auto;
+      padding: 2.5rem 0 3.5rem;
+      color: var(--muted);
+      font-size: .76rem;
+      line-height: 1.65;
+    }
+
+    .top-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 5px;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 640px) {
+      .opening { min-height: 86svh; padding-top: 4rem; }
+      .moment { min-height: 75svh; padding: 6rem 1.35rem; }
+      .moment-inner { grid-template-columns: 1fr; gap: 1.25rem; }
+      .number { padding: 0; text-align: left; }
+      blockquote p { font-size: clamp(1.9rem, 9vw, 2.7rem); }
+      .reflection { margin-top: 1.6rem; }
+      .closing { padding-top: 6rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .flame { animation: none; }
+    }
+
+    @media print {
+      body { background: white; color: #17120f; }
+      body::before, .flame, .begin { display: none; }
+      .opening, .moment { min-height: auto; page-break-inside: avoid; }
+      .opening { padding-top: 3rem; }
+      .moment { padding-block: 3rem; }
+      .closing { background: transparent; }
+    }
+  </style>
+</head>
+<body>
+  <main id="top">
+    <section class="opening" aria-labelledby="page-heading">
+      <div class="opening-inner">
+        <div class="flame" aria-hidden="true"></div>
+        <p class="context">Matthew 6:9–13</p>
+        <h1 id="page-heading">“Pray like this.”</h1>
+        <p class="invitation">Take each line slowly. There is no need to hurry through the prayer Jesus gave us.</p>
+        <a class="begin" href="#father">Begin the prayer <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <div class="prayer" aria-label="The Lord’s Prayer, line by line">
+      <section class="moment" id="father">
+        <div class="moment-inner">
+          <div class="number">01</div>
+          <div>
+            <blockquote><p>“Our Father in heaven,”</p></blockquote>
+            <p class="reflection">We do not begin with a distant power, but with a Father. Jesus teaches us to come as beloved children—together, not alone.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="moment" id="holy">
+        <div class="moment-inner">
+          <div class="number">02</div>
+          <div>
+            <blockquote><p>“may your name be kept holy.”</p></blockquote>
+            <p class="reflection">Before asking for anything, we turn our attention toward God himself. Prayer begins in worship: may all that we are honor his name.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="moment" id="kingdom">
+        <div class="moment-inner">
+          <div class="number">03</div>
+          <div>
+            <blockquote><p>“Let your Kingdom come.”</p></blockquote>
+            <p class="reflection">We ask for the reign of God to break into every shadow—to set things right in the world, and first of all in us.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="moment" id="will">
+        <div class="moment-inner">
+          <div class="number">04</div>
+          <div>
+            <blockquote><p>“Let your will be done on earth as it is in heaven.”</p></blockquote>
+            <p class="reflection">This is surrender without fear. We loosen our grip and trust the wisdom and goodness of the Father, whose will is perfectly done in heaven.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="moment" id="bread">
+        <div class="moment-inner">
+          <div class="number">05</div>
+          <div>
+            <blockquote><p>“Give us today our daily bread.”</p></blockquote>
+            <p class="reflection">Today’s need is enough to bring to him. We receive our lives one day at a time, trusting the Father who knows what his children need.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="moment" id="forgive">
+        <div class="moment-inner">
+          <div class="number">06</div>
+          <div>
+            <blockquote><p>“Forgive us our debts, as we also forgive our debtors.”</p></blockquote>
+            <p class="reflection">We live by mercy, never by our own perfection. The grace we receive is not held tightly; it passes through us toward those who owe us.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="moment" id="deliver">
+        <div class="moment-inner">
+          <div class="number">07</div>
+          <div>
+            <blockquote><p>“Bring us not into temptation, but deliver us from the evil one.”</p></blockquote>
+            <p class="reflection">We confess that we cannot keep ourselves by strength alone. We ask our Father to guide our steps, guard our hearts, and rescue us from evil.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="moment" id="praise">
+        <div class="moment-inner">
+          <div class="number">08</div>
+          <div>
+            <blockquote><p>“For yours is the Kingdom, the power, and the glory forever. Amen.”</p></blockquote>
+            <p class="reflection">The prayer ends where all prayer belongs: in praise. The Kingdom is his, the power is his, and the glory will always be his. Amen—let it be so.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="closing" aria-labelledby="whole-prayer">
+      <div class="full-prayer">
+        <h2 id="whole-prayer">The prayer in full</h2>
+        <p>Our Father in heaven, may your name be kept holy. Let your Kingdom come. Let your will be done on earth as it is in heaven. Give us today our daily bread. Forgive us our debts, as we also forgive our debtors. Bring us not into temptation, but deliver us from the evil one. For yours is the Kingdom, the power, and the glory forever. <span class="amen">Amen.</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>Matthew 6:9–13 · World English Bible, public domain.</div>
+    <a class="top-link" href="#top">Return to the beginning ↑</a>
+  </footer>
+</body>
+</html>
