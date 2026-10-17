@@ -236,6 +236,27 @@
       line-height: 1.65;
     }
 
+    .home-pill {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 10;
+      display: inline-block;
+      padding: .42rem .9rem;
+      border: 1px solid var(--faint);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .02em;
+      text-decoration: none;
+      backdrop-filter: blur(6px);
+    }
+
+    .home-pill:hover { border-color: var(--accent); color: var(--accent); }
+
     .top-link {
       display: inline-block;
       margin-top: 1rem;
@@ -276,6 +297,7 @@
   </style>
 </head>
 <body>
+  <a class="home-pill" href="https://jesuslovestyler.com/">⌂ Home</a>
   <main id="top">
     <section class="opening" aria-labelledby="page-heading">
       <div class="opening-inner">
@@ -381,5 +403,6 @@
     <div>Matthew 6:9–13 · World English Bible, public domain.</div>
     <a class="top-link" href="#top">Return to the beginning ↑</a>
   </footer>
+  <script data-goatcounter="https://jesuslovestyler.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
