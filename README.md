@@ -1,5 +1,8 @@
-# The Lord's Prayer — Line by Line
+# The Lord's Prayer
 
-The prayer Jesus taught us (Matthew 6:9-13), presented line by line with gentle reflections — beautiful and slow.
+The Lord's Prayer from Matthew 6 — the prayer Jesus taught His disciples — presented line by line to pray slowly and make your own.
 
-Built with Muse artifacts. Scripture from the World English Bible (public domain).
+**Live:** https://jesuslovestyler.github.io/Lords-prayer/
+**Home:** https://jesuslovestyler.com/
+
+Scripture is quoted from the World English Bible, a public-domain translation. Released into the public domain (Unlicense — see LICENSE). Built by Tyler with Noki.
